@@ -13,11 +13,11 @@ export default class SlideStore {
 		makeAutoObservable(this);
 		this.rootStore = rootStore;
 		this.saveHandler = reaction(
-			() => this.session.progress,
+			() => ({ ...this.session }),
 			(value) => {
-				if (value > 2) {
+				if (value.progress > 2) {
 					this.rootStore.mainStore.addSession({
-						...this.session,
+						...value,
 						lastOpened: new Date().toISOString(),
 					});
 				}
