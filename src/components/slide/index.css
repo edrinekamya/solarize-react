@@ -1,0 +1,73 @@
+.overlay {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.slide-container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url("/src/assets/introduction.png");
+	background-size: cover;
+	backdrop-filter: blur(5px);
+}
+
+.absolute {
+	position: fixed;
+	right: 0;
+	left: 0;
+	padding: 24px;
+}
+
+.slide-show > .header {
+	top: 0;
+}
+
+.slide-show > .footer {
+	bottom: 0;
+}
+
+.slide-number-section {
+	gap: 2px;
+	backdrop-filter: blur(10px);
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0 8px;
+	color: white;
+}
+
+.slide-number {
+	cursor: pointer;
+	height: 32px;
+	width: 32px;
+	border-radius: 32px;
+}
+
+.slide-number:hover {
+	padding: 4px;
+	color: white;
+	background: var(--color-accent-2);
+}
+
+.slide-number.selected {
+	background: var(--color-accent);
+	color: white;
+}
+
+.slide-number.dot {
+	height: 15px;
+	width: 15px;
+}
+
+.slide-show {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	background: var(--color-background);
+}

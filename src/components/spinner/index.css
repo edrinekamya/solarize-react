@@ -1,0 +1,15 @@
+@media (prefers-reduced-motion: no-preference) {
+  .Spinner {
+    animation: spin infinite 0.8s linear;
+    transform-origin: center; 
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

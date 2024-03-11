@@ -1,0 +1,16 @@
+.frequency-amount {
+  color: white;
+  font-weight: bold;
+}
+
+code {
+  justify-content: center;
+}
+
+.payment-plan > .name {
+  color: var(--color-text-1);
+}
+
+.discount {
+  color: red;
+}

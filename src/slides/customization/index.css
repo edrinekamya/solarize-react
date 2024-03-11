@@ -1,0 +1,32 @@
+
+.customization p {
+  font-weight: bold;
+}
+
+.customization .pricing {
+  background: rgba(0, 0, 0, 0.8);
+  left: 16px;
+  top: 16px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: white;
+}
+
+.customization h3 {
+  color: var(--color-text-1);
+}
+
+.info {
+  padding: 16px;
+  gap: 16px;
+}
+
+.customization img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 16px;
+}
+
+.customization {
+  position: relative;
+}

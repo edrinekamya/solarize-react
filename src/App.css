@@ -1,0 +1,179 @@
+.App {
+  font-weight: normal;
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid-content-heading {
+  text-align: center;
+  color: white;
+}
+
+.grid-center-content {
+  background: var(--color-background);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 8px 20px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.grid-container {
+  flex: 1;
+  display: grid;
+  overflow: auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 8px 20px;
+}
+
+.grid-item {
+  background: var(--color-background);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.grid-item.selected {
+  border: 2px solid indigo;
+}
+
+.logo {
+  height: 24px;
+}
+
+button {
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: var(--color-accent);
+  cursor: pointer;
+  outline: none;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover,
+button:active {
+  background-color: var(--color-accent-1);
+  color: #cccccc;
+}
+
+button:disabled {
+  background: var(--color-accent-2);
+  color: var(--color-accent-3);
+  cursor: not-allowed;
+}
+
+input {
+  color: var(--color-text);
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+input:hover,
+input:active,
+input:focus {
+  border-color: var(--color-accent);
+}
+
+.icon {
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.icon:hover {
+  background: var(--color-background-slate);
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.spaced {
+  justify-content: space-between;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.gap {
+  gap: 8px;
+}
+
+.gap-s {
+  gap: 4px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-text-5);
+}
+
+.text-soft {
+  color: var(--color-text-2);
+}
+
+.text-heading {
+  color: var(--color-heading);
+}
+
+.bd {
+  border: 1px solid var(--color-border);
+}
+
+.bd-top {
+  border-top: 1px solid var(--color-border);
+}
+
+.bd-bottom {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bd-left {
+  border-left: 1px solid var(--color-border);
+}
+
+.bd-right {
+  border-right: 1px solid var(--color-border);
+}
+
+.bd-rounded {
+  border-radius: 4px;
+}

@@ -1,0 +1,27 @@
+.confirmation button {
+  height: 40px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+.buttons {
+  margin-top: 16px;
+}
+
+.confirmation h4 {
+  margin-top: 16px;
+  color: white;
+}
+
+.yes {
+  background: green;
+}
+
+.no {
+  background: red;
+}
+
+.later {
+  background: var(--color-background-mute);
+  color: var(--color-text-1);
+}

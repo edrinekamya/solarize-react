@@ -1,0 +1,40 @@
+.empty {
+	border: 1px dashed var(--color-border);
+	margin: 32px;
+	background: var(--color-background-soft);
+	border-radius: 16px;
+}
+
+.empty h1 {
+	font-size: 28px;
+	font-weight: bold;
+	color: var(--color-text-1);
+}
+
+.empty p {
+	margin-bottom: 10px;
+}
+
+.empty button {
+	height: 40px;
+	padding: 16px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 40px;
+}
+
+.main-content {
+	overflow: auto;
+}
+
+.main-content header {
+	padding: 16px;
+}
+
+.session-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 500px));
+	grid-gap: 16px;
+	padding: 16px;
+	overflow: auto;
+}

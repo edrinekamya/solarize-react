@@ -1,0 +1,16 @@
+.popup-trigger {
+	cursor: pointer;
+	background: transparent;
+}
+
+.popup {
+	position: absolute;
+	z-index: 99;
+	padding: 10px;
+	border-radius: 24px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	background: var(--color-background-mute);
+	border-radius: 4px;
+	border: 1px solid var(--color-border);
+	display: block;
+}

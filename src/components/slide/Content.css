@@ -1,0 +1,11 @@
+.slide-content-container {
+  position: relative;
+  max-width: 1024px;
+  align-self: center;
+}
+
+.slide-content-container > h2 {
+  text-align: center;
+  color: var(--color-text-1);
+  font-weight: bold;
+}

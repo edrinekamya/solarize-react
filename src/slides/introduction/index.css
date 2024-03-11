@@ -1,0 +1,35 @@
+.socials {
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-text-1);
+  border-radius: 32px;
+}
+
+.company-slide {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  margin: 24px;
+  border-radius: 24px;
+}
+
+.mission-statement {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.company-details h2 {
+  margin-top: 20px;
+}
+
+.address {
+  margin-top: 10px;
+}
+
+.address span {
+  font-size: 13px;
+}

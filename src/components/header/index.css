@@ -1,0 +1,74 @@
+.logout {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.logout:hover,
+.logout:active {
+  background: indigo;
+  color: white;
+}
+
+.big-avatar {
+  width: 64px;
+  height: 64px;
+  background: indigo;
+  border-radius: 64px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.user-popup > .top {
+  align-self: center;
+  padding: 16px;
+}
+
+.user-popup > .bottom {
+  padding: 10px 0px;
+}
+
+.top > p {
+  color: var(--color-text-1);
+  font-weight: bold;
+}
+
+.search-bar {
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.search-bar:hover {
+  border: 2px solid indigo;
+}
+
+.search-bar:hover > .icon {
+  color: indigo;
+}
+
+.search-bar > input {
+  background: transparent;
+  height: 32px;
+  border-width: 2;
+}
+
+.home-header {
+  padding: 16px;
+}
+
+.user-popup {
+  width: 40vh;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: indigo;
+  color: white;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  background: rgb(61, 3, 102);
+}
+

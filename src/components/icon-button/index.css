@@ -1,0 +1,12 @@
+.Icon-button {
+  border: none;
+  padding: 4px;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  height: 24px;
+}
+
+.Icon-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,14 @@
+
+.reasons {
+	background: var(--color-background-soft);
+	position: absolute;
+	border-radius: 12px;
+}
+
+.reasons > li {
+	padding: 4px;
+}
+
+.reasons > .selected {
+	box-shadow: none;
+}

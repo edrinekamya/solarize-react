@@ -1,0 +1,45 @@
+.card-payment select {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.card-payment option:not(:checked) {
+  color: white;
+}
+
+.card-payment .half {
+  min-width: 10px;
+}
+
+.card-payment span.danger {
+  font-size: 12px;
+}
+
+.card-payment input,
+select,
+.card-container {
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+
+.card-payment
+.card-container,
+select,
+.card-payment input {
+  height: var(--action-height);
+  padding: 16px;
+}
+
+.card-payment .card-number {
+  border: none;
+  padding: 0;
+}
+
+.card-payment .invalid {
+  border: 1px solid red;
+  color: red;
+}
+
+.card-payment .invalid > input {
+  color: red;
+}
