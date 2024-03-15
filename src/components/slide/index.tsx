@@ -1,10 +1,9 @@
-import React from "react";
-import Slide from "./Slide";
-import { MdArrowBackIos, MdArrowForward, MdCancel } from "react-icons/md";
-import IconButton from "../icon-button";
 import { useStore } from "@/hooks/useStore";
 import { observer } from "mobx-react-lite";
-import './index.css'
+import React from "react";
+import { MdArrowBackIos, MdArrowForward, MdCancel } from "react-icons/md";
+import Slide from "./Slide";
+import './index.css';
 
 const Overlay = observer(() => {
 	const store = useStore();
@@ -32,15 +31,17 @@ const SlideShow: React.FC = observer(() => {
 			</section>
 			<section className="header absolute row spaced">
 				{slideShow.session.slideNumber ? (
-					<IconButton onClick={slideShow.previousSlide}>
+					<button onClick={slideShow.previousSlide}>
 						<MdArrowBackIos />
-					</IconButton>
+						Back
+					</button>
 				) : (
 					<span></span>
 				)}
-				<IconButton onClick={slideShow.close}>
+				<button onClick={slideShow.close}>
+					Close
 					<MdCancel />
-				</IconButton>
+				</button>
 			</section>
 
 			{!slideShow.isLast && (
@@ -61,9 +62,10 @@ const SlideShow: React.FC = observer(() => {
 						))}
 					</section>
 					{!slideShow.hideNext && (
-						<IconButton onClick={slideShow.nextSlide}>
+						<button onClick={slideShow.nextSlide}>
+							Next
 							<MdArrowForward />
-						</IconButton>
+						</button>
 					)}
 				</section>
 			)}

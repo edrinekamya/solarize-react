@@ -68,28 +68,32 @@ export default class SlideStore {
 	}
 
 	get savingsAndROI() {
-		// user information
-		const electricalCost = this.session.electricityCost; // $/ kwh
-		const sunlightHours = this.session.sunlightHours; //hrs
+		// User information
+		const electricalCost = this.session.electricityCost; // $/kWh
+		const sunlightHours = this.session.sunlightHours; // hrs
 		const roofSize = this.session.solarSpace; // sq.mts
+		const energyUsage = this.session.energyUsage; // kWh
 
 		const { panelCost, panelOutput, addOnSavings, addOnCost } =
 			this.costAndSavings;
 
-		// calculate energy production
+		// Calculate energy production
 		const baseEnergyProduction =
-			panelOutput * sunlightHours * 365 * roofSize; // kwh/year
-		const newEnergyProduction = baseEnergyProduction * addOnSavings; // kwh/year with add-ons
+			panelOutput * sunlightHours * 365 * roofSize; // kWh/year
+		const newEnergyProduction = baseEnergyProduction * (1 + addOnSavings); // kWh/year with add-ons
 
-		// calculate savings
-		const baseSavings = baseEnergyProduction * electricalCost; // $
-		const newSavings = newEnergyProduction * electricalCost; // $
+		// Calculate savings
+		const baseSavings =
+			Math.abs((energyUsage - baseEnergyProduction) * electricalCost); // $
+		const newSavings = Math.abs(
+			(energyUsage - newEnergyProduction) * electricalCost
+		); // $
 
-		// calculate ROI
+		// Calculate ROI
 		const baseROI = (baseSavings / panelCost) * 100; // %
 		const newROI = (newSavings / (panelCost + addOnCost)) * 100; // %
 
-		// return the values
+		// Return the values
 		return {
 			baseSavings: baseSavings.toFixed(2),
 			baseROI: baseROI.toFixed(2) + "%",
@@ -127,6 +131,10 @@ export default class SlideStore {
 
 	updateStatus = (status: SessionStatus) => {
 		this.session.status = status;
+	};
+
+	updateEnergyUsage = (value: number) => {
+		this.session.energyUsage = value;
 	};
 
 	updateSunlightHours = (sunlightHours: number) => {
