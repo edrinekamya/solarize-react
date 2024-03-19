@@ -79,7 +79,7 @@ export default class SlideStore {
 
 		// Calculate energy production
 		const baseEnergyProduction =
-			panelOutput * sunlightHours * 365 * roofSize; // kWh/year
+			(panelOutput / 1000/ 24) * sunlightHours * 365 * roofSize; // kWh/year
 		const newEnergyProduction = baseEnergyProduction * (1 + addOnSavings); // kWh/year with add-ons
 
 		// Calculate savings

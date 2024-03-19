@@ -12,7 +12,7 @@ const Summary = observer(() => {
 			<h3 className="grid-content-heading">Summary</h3>
 			<section className="row spaced">
 				<span>Savings</span>
-				<p>{savings.baseSavings}</p>
+				<p>${savings.baseSavings}</p>
 			</section>
 			<section className="row spaced">
 				<span>Return on Investment</span>
@@ -21,7 +21,7 @@ const Summary = observer(() => {
 			<h4>With Add-ons</h4>
 			<section className="row spaced">
 				<span>Savings</span>
-				<p>{savings.newSavings}</p>
+				<p>${savings.newSavings}</p>
 			</section>
 			<section className="row spaced">
 				<span>Return on Investment</span>
